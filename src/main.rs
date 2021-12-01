@@ -11,5 +11,6 @@ fn read_string() -> String {
     io::stdin()
         .read_line(&mut input)
         .expect("Failed to read line");
-    String::from(input.trim())
+
+    input.trim().to_lowercase()
 }
