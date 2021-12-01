@@ -3,7 +3,12 @@ use std::io;
 fn main() {
     println!("Hello, what's your name?");
     let your_name = read_string();
-    println!("Hello, {}!", your_name);
+    let visitor_list = ["bert", "steve", "fred", "connor"];
+    if visitor_list.contains(&your_name.as_str()) {
+        println!("Welcome to the Treehouse, {}.", your_name);
+    } else {
+        println!("Sorry, you are not on the list.");
+    }
 }
 
 fn read_string() -> String {
